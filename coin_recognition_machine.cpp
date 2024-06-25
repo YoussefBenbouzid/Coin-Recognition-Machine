@@ -62,7 +62,7 @@ void leggimoneta(void) {
     while(PORTAbits.RA2==0) {
         ADCON0bits.GO=1;
         while(ADCON0bits.GO);
-        input = ADRESH;
+        input=ADRESH;
         if(input>65) {                      //acquisition if the input signal is higher than 0,8 V
             area=area+(input*19,6)/1000;
             duratation++;
